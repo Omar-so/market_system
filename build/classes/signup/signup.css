@@ -1,0 +1,54 @@
+/* Style for the form container */
+.form-container {
+    -fx-background-color: #f4f7fc;
+    -fx-padding: 30;
+    -fx-border-radius: 10;
+    -fx-effect: dropshadow(gaussian, #000000, 10, 0, 0, 2);
+    -fx-background-insets: 0;
+    -fx-pref-width: 300px;
+    -fx-alignment: center;
+}
+
+/* Header Label Style */
+.header-label {
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #333;
+    -fx-margin-bottom: 20px;
+}
+
+/* Style for input fields */
+.input-field {
+    -fx-pref-width: 250px;
+    -fx-padding: 10;
+    -fx-font-size: 14px;
+    -fx-border-radius: 5;
+    -fx-background-color: #fff;
+    -fx-border-color: #ccc;
+    -fx-border-width: 1px;
+    -fx-focus-color: #66afe9;
+    -fx-faint-focus-color: #66afe9;
+}
+
+/* Style for submit button */
+.submit-button {
+    -fx-background-color: #4CAF50;
+    -fx-text-fill: white;
+    -fx-pref-width: 100px;
+    -fx-padding: 10;
+    -fx-font-size: 16px;
+    -fx-border-radius: 5;
+    -fx-cursor: hand;
+}
+
+.submit-button:hover {
+    -fx-background-color: #45a049;
+}
+
+/* Style for error message */
+.error-label {
+    -fx-font-size: 14px;
+    -fx-text-fill: red;
+    -fx-padding-top: 10px;
+    -fx-alignment: center;
+}

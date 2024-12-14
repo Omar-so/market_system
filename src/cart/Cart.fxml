@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" stylesheets="@cart.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cart.CartController">
+
+   <children>
+      <!-- Title label for the cart -->
+      <Label layoutX="227.0" layoutY="20.0" prefHeight="40.0" prefWidth="160.0" text="Your Cart" textFill="#863c3c">
+         <font>
+            <Font size="28.0" />
+         </font>
+      </Label>
+
+      <!-- HBox for ListView headers -->
+      <HBox layoutX="39.0" layoutY="60.0" prefHeight="20.0" prefWidth="522.0" spacing="10">
+         <children>
+            <Label text="Product Name" prefWidth="200.0" style="-fx-font-weight: bold; -fx-text-fill: #333;" />
+            <Label text="Product Price" prefWidth="150.0" style="-fx-font-weight: bold; -fx-text-fill: #333;" />
+            <Label text="Quantity" prefWidth="150.0" style="-fx-font-weight: bold; -fx-text-fill: #333;" />
+         </children>
+      </HBox>
+
+      <!-- ListView to display cart items -->
+      <ListView fx:id="cartListView" layoutX="39.0" layoutY="81.0" prefHeight="200.0" prefWidth="522.0" 
+                style="-fx-background-color: #f8f8f8; -fx-border-radius: 10; -fx-border-color: #ccc;" />
+      
+      <!-- HBox containing buttons -->
+      <HBox alignment="CENTER" layoutX="162.0" layoutY="287.0" prefHeight="100.0" prefWidth="245.0" spacing="20">
+         <children>
+            <!-- Checkout Button -->
+            <Button fx:id="checkoutButton" mnemonicParsing="false" prefHeight="43.0" prefWidth="112.0" 
+                    styleClass="checkout-button" text="Check out" onAction="#checkout"/>
+            
+            <!-- Delete Button -->
+            <Button fx:id="deleteButton" mnemonicParsing="false" prefHeight="45.0" prefWidth="129.0" 
+                    styleClass="delete-button" text="Delete" onAction="#deleteProduct"/>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

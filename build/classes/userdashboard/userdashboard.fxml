@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane prefHeight="600.0" prefWidth="800.0" stylesheets="@dashboard.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="userdashboard.UserdashboardController">
+    <!-- Top Section -->
+    <top>
+        <HBox spacing="10" style="-fx-padding: 10;" styleClass="chart-pie">
+            <Label prefHeight="25.0" prefWidth="389.0" style="-fx-text-fill: white; -fx-font-size: 18px;" text="Dashboard" textAlignment="RIGHT" />
+        </HBox>
+    </top>
+
+    <!-- Left Section -->
+    <left>
+        <VBox prefHeight="500.0" prefWidth="200.0" spacing="15" style="-fx-padding: 20;" styleClass="chart-pie">
+            <Button prefHeight="50.0" prefWidth="180.0" style="-fx-background-color: #1ABC9C; -fx-text-fill: white; -fx-font-size: 16px;" text="Dashboard" />
+            <Button onAction="#Cartbutton" prefHeight="50.0" prefWidth="180.0" style="-fx-background-color: #1ABC9C; -fx-text-fill: white; -fx-font-size: 16px;" text="Cart" />
+            <Button onAction="#Setting" prefHeight="50.0" prefWidth="180.0" style="-fx-background-color: #1ABC9C; -fx-text-fill: white; -fx-font-size: 16px;" text="Settings" />
+            <Button onAction="#Logout" prefHeight="50.0" prefWidth="180.0" style="-fx-background-color: #E74C3C; -fx-text-fill: white; -fx-font-size: 16px;" text="Logout" />
+        </VBox>
+    </left>
+
+    <!-- Center Section -->
+    <center>
+        <VBox prefHeight="400.0" prefWidth="600.0" spacing="10" style="-fx-padding: 20;">
+            <Label fx:id="setTitle" style="-fx-font-size: 24px; -fx-font-weight: bold;" text="Welcome!" />
+            
+            <GridPane fx:id="Panel" alignment="CENTER" hgap="20" prefWidth="562.0" style="-fx-padding: 10;" vgap="20">
+            </GridPane>
+        </VBox>
+    </center>
+
+    <!-- Bottom Section -->
+    <bottom>
+        <HBox alignment="center" prefHeight="69.0" prefWidth="600.0" spacing="10" style="-fx-padding: 10;" styleClass="chart-pie">
+            <Label style="-fx-text-fill: white;" text="Footer - Application Name © 2024" />
+        </HBox>
+    </bottom>
+</BorderPane>

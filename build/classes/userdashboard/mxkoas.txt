@@ -1,0 +1,3 @@
+Product Name : rice Product Price : 30 Product Quntity :100
+Product Name : oil Product Price : 30 Product Quntity :200
+Product Name : meat Product Price : 30 Product Quntity :10

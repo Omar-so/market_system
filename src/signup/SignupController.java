@@ -20,6 +20,7 @@ import javafx.stage.Stage;
 import javafx.scene.Node;
 import Dashboard.DashBoardController;
 import java.io.BufferedWriter;
+import userdashboard.UserdashboardController;
 
 public class SignupController implements Initializable {
 
@@ -81,18 +82,28 @@ public class SignupController implements Initializable {
     public void signinbutton(ActionEvent event) throws IOException {
         String path1 = "/home/omar-so/NetBeansProjects/Main/src/signup/admin.txt";
         String path2 = "/home/omar-so/NetBeansProjects/Main/src/signup/user.txt";
+        String fxmlAdmin = "/Dashboard/DashBoard.fxml";
+        String fxmlUser = "/userdashboard/userdashboard.fxml";
+
         boolean found = false;
         String selectedPath = admin.isSelected() ? path1 : path2;
+        String selectedFxml = admin.isSelected() ? fxmlAdmin : fxmlUser;
 
         try (BufferedReader br = new BufferedReader(new FileReader(selectedPath))) {
             String line;
             while ((line = br.readLine()) != null) {
                 String[] myarray = line.split(" ");
                 if (myarray[0].equals(usernameField.getText()) && myarray[1].equals(passwordField.getText())) {
-                    FXMLLoader loader = new FXMLLoader(getClass().getResource("/Dashboard/DashBoard.fxml"));
+                    FXMLLoader loader = new FXMLLoader(getClass().getResource(selectedFxml));
                     Parent root = loader.load();
-                    DashBoardController ds = loader.getController();
-                    ds.settitle(usernameField.getText());
+
+                    if (admin.isSelected()) {
+                        DashBoardController ds = loader.getController();
+                        ds.settitle(usernameField.getText());
+                    } else {
+                        UserdashboardController ds = loader.getController();
+                        ds.settitle(usernameField.getText());
+                    }
 
                     Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
                     Scene scene = new Scene(root);

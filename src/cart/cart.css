@@ -1,0 +1,30 @@
+.checkout-button {
+    -fx-background-color: #4CAF50;
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-padding: 10px;
+    -fx-background-radius: 5px;
+}
+
+.checkout-button:hover {
+    -fx-background-color: #45a049;
+}
+
+.delete-button {
+    -fx-background-color: #f44336;
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-padding: 10px;
+    -fx-background-radius: 5px;
+}
+
+.delete-button:hover {
+    -fx-background-color: #e53935;
+}
+
+#cartListView {
+    -fx-font-size: 14px;
+    -fx-background-color: #f8f8f8;
+    -fx-border-radius: 10;
+    -fx-border-color: #ccc;
+}
